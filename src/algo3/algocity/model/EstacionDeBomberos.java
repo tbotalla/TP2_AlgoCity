@@ -1,22 +1,21 @@
 package algo3.algocity.model;
 
 public class EstacionDeBomberos extends Unidad {
-	
-	Conector conexion;
-	
-	public EstacionDeBomberos(int costo){
-		this.costo = costo;
-		conexion = null;
+
+	private Conector conexion;
+
+	public EstacionDeBomberos() {
+		this.costo = 1500;
+		this.conexion = null;
 	}
 	
-	public int getCosto() {
-		
-		return this.costo;
-	}
-	
-	public void conectarTuberia(Conector unaTuberia){
+	//TODO Revisar si sirve el metodo
+	public void conectarTuberia(Conector unaTuberia) {
 		this.conexion = unaTuberia;
 	}
-	
-	
+
+	public Conector getConexion() {
+		return this.conexion;
+	}
+
 }
