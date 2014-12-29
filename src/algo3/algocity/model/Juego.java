@@ -125,6 +125,10 @@ public class Juego {
 	public Reparador reparador() {
 		return this.mapa.reparador();
 	}
+	
+	public GeneradorCatastrofe generadorCatastrofe(){
+		return genCatastrofe;
+	}
 
 	/**********************************************************************/
 	/**************************** Persistencia ****************************/

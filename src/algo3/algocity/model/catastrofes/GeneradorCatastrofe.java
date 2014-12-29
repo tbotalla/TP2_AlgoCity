@@ -17,10 +17,13 @@ public class GeneradorCatastrofe extends Observable implements Observer {
 
 	public void initRandomCatastrofe() {
 		Random aleatorio = new Random();
-		if (aleatorio.nextInt(100) <= 10) {
+		if (aleatorio.nextInt(100) <= 90) {
+			System.out.println("catastrofeeeeee");
 			catastrofe = (aleatorio.nextInt(2) == 0) ? new CatastrofeGodzilla(
 					mapa) : new CatastrofeTerremoto(mapa);
 			catastrofe.iniciar();
+			setChanged();
+			notifyObservers(catastrofe);
 		}
 	}
 

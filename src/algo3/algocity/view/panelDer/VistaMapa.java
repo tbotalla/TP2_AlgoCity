@@ -27,6 +27,7 @@ public class VistaMapa extends JPanel implements Observer {
 		this.contenedor = contenedor;
 		setBorder(BorderFactory.createTitledBorder("Mapa superficial"));
 		setPreferredSize(new Dimension(600, 600));
+		vistaCatastrofe = new VistaCatastrofe(juego.generadorCatastrofe(), this);
 		this.juego = juego;
 		mapa = juego.mapa();
 		mapa.ciudad().addObserver(this);
@@ -72,6 +73,10 @@ public class VistaMapa extends JPanel implements Observer {
 		remove(i);
 		add(tabla[coord.getX()][coord.getY()], i);
 		revalidate();
+	}
+	
+	public VistaPanelDer getContenedor(){
+		return contenedor;
 	}
 
 }
